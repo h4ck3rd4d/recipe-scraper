@@ -1,0 +1,27 @@
+{% extends 'scraper/base.html' %}
+
+
+{% block content %}
+    <header>
+        <h1 class="main-title">Grocery Getter</h1>
+        
+       
+    </header>
+    <div class="search">
+        <h3 class="sub-title">Search by Ingredients</h3>
+        <p class="search-instructions">
+            Enter at least one ingredient or key word.
+        </br></p>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+          
+            <input type="submit" value="Submit">
+        </form>            
+    </div>
+
+    
+
+
+
+{% endblock %}
